@@ -5,12 +5,13 @@ export const minSquaredNumber = (arr) => {
     return null;
   }
   const square = arr.map((num) => num * num);
-  console.log(square);
-  let min = square[0];
-  for (let i = 0; i < square.length; i++) {
-    if (min > square[i]) {
-      min = square[i];
+  const result = square.reduce((acc, num) => {
+    if (acc > num) {
+      acc = num;
     }
-  }
-  return min;
+    return acc;
+  }, 100000000000000000000000000000);
+  return result;
 };
+const arr = [-777, 3, 2, 6, 45, -20];
+console.log(minSquaredNumber(arr));
