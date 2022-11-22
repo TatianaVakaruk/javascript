@@ -1,12 +1,12 @@
-function getTitleElement() {
-  //const titleElem = document.querySelector(".title");
-  console.dir(document.querySelector(".title"));
-  return document.querySelector(".title");
+export function getTitleElement() {
+  const titleElem = document.querySelector(".title");
+  console.dir(titleElem);
+  return titleElem;
 }
 //console.log(getTitleElement());
-function getInputElement() {
-  //const inputElem = document.querySelector("input[type = text]");
-  console.dir(document.querySelector("input[type = text]"));
-  return document.querySelector("input[type = text]");
+export function getInputElement() {
+  const inputElem = document.querySelector("input[type = text]");
+  console.dir(inputElem);
+  return inputElem;
 }
 //console.log(getInputElement());
