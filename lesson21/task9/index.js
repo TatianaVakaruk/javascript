@@ -13,4 +13,3 @@ export function finishList() {
   document.querySelector(".special").after(li3);
   return li, li1, li2, li3;
 }
-console.log(finishList());
