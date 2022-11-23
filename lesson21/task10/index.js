@@ -5,3 +5,4 @@ export function finishForm() {
   document.querySelector(".login-form").prepend(input);
   return input;
 }
+finishForm();
