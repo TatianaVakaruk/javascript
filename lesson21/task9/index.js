@@ -11,5 +11,6 @@ export function finishList() {
   let li3 = document.createElement("li");
   li3.textContent = "6";
   document.querySelector(".special").after(li3);
+  return li, li1, li2, li3;
 }
 console.log(finishList());
