@@ -6,7 +6,7 @@ export function getTitle() {
 
 export function getDescription() {
   const descriptionText = document.querySelector(".about");
-  const text = descriptionText.innerHTML;
+  const text = descriptionText.innerText;
   return text;
 }
 
