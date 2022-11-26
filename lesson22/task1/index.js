@@ -34,15 +34,20 @@ const clear = () => {
 };
 clearBtn.addEventListener("click", clear);
 elem.innerHTML = "";
-stop.removeEventListener("click", () => {
-  divElem.addEventListener("click", GreenDiv);
-  pElem.addEventListener("click", GreenP);
-  divElem.addEventListener("click", GreyDiv, true);
-  pElem.addEventListener("click", GreyP, true);
-});
+
 start.EventListener("click", () => {
-  divElem.addEventListener("click", GreenDiv);
-  pElem.addEventListener("click", GreenP);
-  divElem.addEventListener("click", GreyDiv, true);
-  pElem.addEventListener("click", GreyP, true);
+  return (
+    divElem.addEventListener("click", GreenDiv),
+    pElem.addEventListener("click", GreenP),
+    divElem.addEventListener("click", GreyDiv, true),
+    pElem.addEventListener("click", GreyP, true)
+  );
+});
+stop.removeEventListener("click", () => {
+  return (
+    divElem.addEventListener("click", GreenDiv),
+    pElem.addEventListener("click", GreenP),
+    divElem.addEventListener("click", GreyDiv, true),
+    pElem.addEventListener("click", GreyP, true)
+  );
 });
