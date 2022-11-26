@@ -28,7 +28,7 @@ const GreyP = logTarget.bind("P", "grey");
 pElem.addEventListener("click", GreyP, true);
 
 const GreySpan = logTarget.bind("SPAN", "grey");
-spanElem.addEventListener("click", GreySpan);
+spanElem.addEventListener("click", GreySpan, true);
 const clear = () => {
   elem.innerHTML = "";
 };
@@ -39,19 +39,19 @@ start.EventListener("click", () => {
   return (
     divElem.addEventListener("click", GreenDiv),
     pElem.addEventListener("click", GreenP),
+    spanElem.addEventListener("click", GreenSpan),
     divElem.addEventListener("click", GreyDiv, true),
     pElem.addEventListener("click", GreyP, true),
-    spanElem.addEventListener("click", GreenSpan),
-    spanElem.addEventListener("click", GreySpan)
+    spanElem.addEventListener("click", GreySpan, true)
   );
 });
 stop.removeEventListener("click", () => {
   return (
     divElem.addEventListener("click", GreenDiv),
     pElem.addEventListener("click", GreenP),
+    spanElem.addEventListener("click", GreenSpan),
     divElem.addEventListener("click", GreyDiv, true),
     pElem.addEventListener("click", GreyP, true),
-    spanElem.addEventListener("click", GreenSpan),
-    spanElem.addEventListener("click", GreySpan)
+    spanElem.addEventListener("click", GreySpan, true)
   );
 });
