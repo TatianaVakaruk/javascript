@@ -40,7 +40,9 @@ start.EventListener("click", () => {
     divElem.addEventListener("click", GreenDiv),
     pElem.addEventListener("click", GreenP),
     divElem.addEventListener("click", GreyDiv, true),
-    pElem.addEventListener("click", GreyP, true)
+    pElem.addEventListener("click", GreyP, true),
+    spanElem.addEventListener("click", GreenSpan),
+    spanElem.addEventListener("click", GreySpan)
   );
 });
 stop.removeEventListener("click", () => {
@@ -48,6 +50,8 @@ stop.removeEventListener("click", () => {
     divElem.addEventListener("click", GreenDiv),
     pElem.addEventListener("click", GreenP),
     divElem.addEventListener("click", GreyDiv, true),
-    pElem.addEventListener("click", GreyP, true)
+    pElem.addEventListener("click", GreyP, true),
+    spanElem.addEventListener("click", GreenSpan),
+    spanElem.addEventListener("click", GreySpan)
   );
 });
