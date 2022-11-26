@@ -45,6 +45,7 @@ start.EventListener("click", () => {
     spanElem.addEventListener("click", GreySpan, true)
   );
 });
+
 stop.removeEventListener("click", () => {
   return (
     divElem.addEventListener("click", GreenDiv),
