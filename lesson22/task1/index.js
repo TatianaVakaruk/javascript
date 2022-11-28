@@ -13,22 +13,17 @@ const logTarget = (text, color) => {
 };
 
 const GreenDiv = logTarget.bind("DIV", "green");
-divElem.addEventListener("click", GreenDiv);
 
 const GreenP = logTarget.bind("P", "green");
-pElem.addEventListener("click", GreenP);
 
 const GreenSpan = logTarget.bind("Span", "green");
-spanElem.addEventListener("click", GreenSpan);
 
 const GreyDiv = logTarget.bind("DIV", "grey");
-divElem.addEventListener("click", GreyDiv, true);
 
 const GreyP = logTarget.bind("P", "grey");
-pElem.addEventListener("click", GreyP, true);
 
 const GreySpan = logTarget.bind("SPAN", "grey");
-spanElem.addEventListener("click", GreySpan, true);
+
 const clear = () => {
   elem.innerHTML = "";
 };
