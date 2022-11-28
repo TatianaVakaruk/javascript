@@ -23,12 +23,6 @@ const logGreyDiv = logTarget.bind("DIV", "grey");
 const logGreyP = logTarget.bind("P", "grey");
 
 const logGreySpan = logTarget.bind("SPAN", "grey");
-divElem.addEventListener("click", logGreyDiv, true);
-divElem.addEventListener("click", logGreenDiv);
-pElem.addEventListener("click", logGreyP, true);
-pElem.addEventListener("click", logGreenP);
-spanElem.addEventListener("click", logGreySpan, true);
-spanElem.addEventListener("click", logGreenSpan);
 
 const clear = () => {
   elem.innerHTML = "";
