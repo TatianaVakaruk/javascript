@@ -50,5 +50,5 @@ const removeHandlers = () => {
   spanElem.addEventListener("click", logGreySpan, true);
   spanElem.addEventListener("click", logGreenSpan);
 };
-const removeHandlersBtnElem = documenr.querySelector(".remove-handlers-btn");
+const removeHandlersBtnElem = document.querySelector(".remove-handlers-btn");
 removeHandlersBtnElem.removeEventListener("click", removeHandlers);
