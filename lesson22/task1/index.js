@@ -31,23 +31,31 @@ clearBtn.addEventListener("click", clear);
 elem.innerHTML = "";
 
 start.EventListener("click", () => {
-  return (
-    divElem.addEventListener("click", GreenDiv),
-    pElem.addEventListener("click", GreenP),
-    spanElem.addEventListener("click", GreenSpan),
-    divElem.addEventListener("click", GreyDiv, true),
-    pElem.addEventListener("click", GreyP, true),
-    spanElem.addEventListener("click", GreySpan, true)
-  );
+  return;
+  GreenDiv = logTarget.bind("DIV", "green");
+
+  GreenP = logTarget.bind("P", "green");
+
+  GreenSpan = logTarget.bind("Span", "green");
+
+  GreyDiv = logTarget.bind("DIV", "grey");
+
+  GreyP = logTarget.bind("P", "grey");
+
+  GreySpan = logTarget.bind("SPAN", "grey");
 });
 
 stop.removeEventListener("click", () => {
-  return (
-    divElem.addEventListener("click", GreenDiv),
-    pElem.addEventListener("click", GreenP),
-    spanElem.addEventListener("click", GreenSpan),
-    divElem.addEventListener("click", GreyDiv, true),
-    pElem.addEventListener("click", GreyP, true),
-    spanElem.addEventListener("click", GreySpan, true)
-  );
+  return;
+  GreenDiv = logTarget.bind("DIV", "green");
+
+  GreenP = logTarget.bind("P", "green");
+
+  GreenSpan = logTarget.bind("Span", "green");
+
+  GreyDiv = logTarget.bind("DIV", "grey");
+
+  GreyP = logTarget.bind("P", "grey");
+
+  GreySpan = logTarget.bind("SPAN", "grey");
 });
