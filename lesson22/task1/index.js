@@ -12,17 +12,17 @@ const logTarget = (text, color) => {
   elem.innerHTML += `<span style = "color: ${color}; margin-left: 8px">${text}</span>`;
 };
 
-const GreenDiv = logTarget.bind("DIV", "green");
+const logGreenDiv = logTarget.bind("DIV", "green");
 
-const GreenP = logTarget.bind("P", "green");
+const logGreenP = logTarget.bind("P", "green");
 
-const GreenSpan = logTarget.bind("Span", "green");
+const logGreenSpan = logTarget.bind("Span", "green");
 
-const GreyDiv = logTarget.bind("DIV", "grey");
+const logGreyDiv = logTarget.bind("DIV", "grey");
 
-const GreyP = logTarget.bind("P", "grey");
+const logGreyP = logTarget.bind("P", "grey");
 
-const GreySpan = logTarget.bind("SPAN", "grey");
+const logGreySpan = logTarget.bind("SPAN", "grey");
 
 const clear = () => {
   elem.innerHTML = "";
@@ -41,6 +41,7 @@ const attachHandlers = () => {
 
 const attachHandlersBtnElem = document.querySelector(".attach-handlers-btn");
 attachHandlersBtnElem.addEventListener("click", attachHandlers);
+
 const removeHandlers = () => {
   divElem.addEventListener("click", logGreyDiv, true);
   divElem.addEventListener("click", logGreenDiv);
