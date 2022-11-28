@@ -42,13 +42,13 @@ const attachHandlers = () => {
 const attachHandlersBtnElem = document.querySelector(".attach-handlers-btn");
 attachHandlersBtnElem.addEventListener("click", attachHandlers);
 
-const removeHandlers = () => {
+/*const removeHandlers = () => {
   divElem.addEventListener("click", logGreyDiv, true);
   divElem.addEventListener("click", logGreenDiv);
   pElem.addEventListener("click", logGreyP, true);
   pElem.addEventListener("click", logGreenP);
   spanElem.addEventListener("click", logGreySpan, true);
   spanElem.addEventListener("click", logGreenSpan);
-};
+};*/
 const removeHandlersBtnElem = document.querySelector(".remove-handlers-btn");
-removeHandlersBtnElem.removeEventListener("click", removeHandlers);
+removeHandlersBtnElem.removeEventListener("click", attachHandlers);
