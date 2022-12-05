@@ -1,4 +1,5 @@
 const counterValueElem = document.querySelector(".counter__value");
+const counterElem = document.querySelector(".counter");
 const onCounterChange = (e) => {
   const isButton = e.target.classList.contains("counter__button");
   if (!isButton) {
@@ -11,8 +12,8 @@ const onCounterChange = (e) => {
   localStorage.setItem("counterValue", newValue);
   counterValueElem.textContent = newValue;
 };
-const btn = document.querySelector(".counter__button");
-btn.addEventListener("click", onCounterChange);
+
+counterElem.addEventListener("click", onCounterChange);
 const onStorageChange = (e) => {
   counterValueElem.textContent = e.newValue;
 };
