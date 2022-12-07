@@ -1,6 +1,6 @@
 import { initTodoListHandlers } from "./todoList";
-import { onCreateTask } from "../createTask";
-import { onToggeleTask } from "../updateTask";
+import { onCreateTask } from "./createTask";
+import { onToggeleTask } from "./updateTask";
 import { getItem, setItem } from "./storage";
 const listElem = document.querySelector(".list");
 
