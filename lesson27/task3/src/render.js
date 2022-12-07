@@ -12,7 +12,7 @@ const tasks = [
   { text: "Buy meat", done: true, id: "5" },
 ];
 
-const renderTasks = (tasksList) => {
+export const renderTasks = (tasksList) => {
   listElem.innerHTML = "";
   const tasksElems = tasksList
     .slice()
