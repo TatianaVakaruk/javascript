@@ -15,5 +15,5 @@ export const onCreateTask = () => {
     id: Math.random().toString(),
   });
   setItem("taskList", newTaskList);
-  renderTask();
+  renderTasks();
 };
