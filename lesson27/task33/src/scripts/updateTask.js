@@ -20,5 +20,5 @@ export const onToggeleTask = (e) => {
     return tasks;
   });
   setItem("taskList", newTaskList);
-  renderTask();
+  renderTasks();
 };
