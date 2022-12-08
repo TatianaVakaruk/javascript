@@ -108,3 +108,4 @@ clearBtnElem.addEventListener("click", clearBoard);
 document.addEventListener("DOMContentLoaded", () => {
   attachHandlers();
 });
+const a;
