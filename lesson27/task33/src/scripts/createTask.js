@@ -1,19 +1,25 @@
 import { renderTasks } from "./render.js";
 import { getItem, setItem } from "./storage.js";
+
 export const onCreateTask = () => {
   const taskTitleInputElem = document.querySelector(".task-input");
+
   const text = taskTitleInputElem.value;
+
   if (!text) {
     return;
   }
   taskTitleInputElem.value = "";
-  const taskList = getItem("taskList") || [];
-  const newTaskList = taskList.concat({
+  const tasksList = getItem("tasksList") || [];
+
+  const newTasksList = tasksList.concat({
     text,
     done: false,
-    createData: newData().toISOString(),
+    createDate: new Date().toISOString(),
     id: Math.random().toString(),
   });
-  setItem("taskList", newTaskList);
+
+  setItem("tasksList", newTasksList);
+
   renderTasks();
 };
