@@ -75,7 +75,7 @@ const shmoment = (initValue) => {
     },
 
     result() {
-      return new Date(result);
+      return new Date(result).toString();
     },
   };
   return calc;
