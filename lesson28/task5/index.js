@@ -1,86 +1,71 @@
 const shmoment = (initValue) => {
-  let result;
+  let result = new Date(initValue).getMilliseconds();
   const calc = {
-    add(arg, initValue) {
+    add(arg, value) {
       switch (arg) {
         case "years":
-          let year1 = new Data(initValue).getFullYear();
-          let year = new Data(initValue).setFullYear(year1 + value);
-          result = new Date(year).getMilliseconds();
+          let value1 = new Date(value).getMilliseconds;
+          result = result + value1;
           return this;
 
         case "months":
-          let month1 = new Date(initValue).getMonth();
-          let month2 = new Date(initValue).setMonth(month1 + value);
-          result = new Date(month2).getMilliseconds();
+          let month1 = new Date(value).getMilliseconds();
+
+          result = result + month1;
           return this;
 
         case "hour":
-          let hour1 = new Date(initValue).getHours();
-          let hour = new Date(initValue).setHours(hour1 + value);
-          result = new Date(hour).getMilliseconds();
+          let hour1 = new Date(value).getMilliseconds();
+          result = result + hour1;
           return this;
 
         case "minutes":
-          let minutes1 = new Date(initValue).getMinutes();
-          let minutes = new Date(initValue).setMinutes(minutes1 + value);
-          result = new Date(minutes).getMilliseconds();
+          let minutes1 = new Date(value).getMilliseconds();
+          result = result + minutes1;
           return this;
 
         case "seconds":
-          let seconds1 = new Date(initValue).getSeconds();
-          let seconds = new Date(initValue).setMinutes(seconds1 + value);
-          let result = new Date(seconds).getMilliseconds();
+          let seconds1 = new Date(value).getMilliseconds();
+          result = result + seconds1;
           return this;
 
         case "milliseconds":
-          let milliseconds1 = new Date(initValue).getMilliseconds();
-          let milliseconds = new Date(initValue).setMilliseconds(
-            milliseconds1 + value
-          );
-          result = new Date(milliseconds).getMilliseconds();
+          let milliseconds1 = new Date(value).getMilliseconds();
+          let result = result + milliseconds1;
           return this;
       }
     },
 
-    subtract(arg, initValue) {
+    subtract(arg, value) {
       switch (arg) {
         case "years":
-          let year1 = new Data(initValue).getFullYear();
-          let year = new Data(initValue).setFullYear(year1 - value);
-          result = new Date(year).getMilliseconds();
+          let year1 = new Data(value).getMilliseconds();
+          result = result - year1;
           return this;
 
         case "months":
-          let month1 = new Date(initValue).getMonth();
-          let month2 = new Date(initValue).setMonth(month1 - value);
-          result = month[new Date(month2).getMilliseconds()];
+          let month1 = new Date(value).getMilliseconds();
+          result = result - month1;
           return this;
 
         case "hour":
-          let hour1 = new Date(initValue).getHours();
-          let hour = new Date(initValue).setHours(hour1 - value);
-          result = new Date(hour).getMilliseconds();
+          let hour1 = new Date(value).getMilliseconds();
+          result = result - hour1;
           return this;
 
         case "minutes":
-          let minutes1 = new Date(initValue).getMinutes();
-          let minutes = new Date(initValue).setMinutes(minutes1 - value);
-          result = new Date(minutes).getMilliseconds();
+          let minutes1 = new Date(value).getMilliseconds();
+          result = result - minutes1;
           return this;
 
         case "seconds":
-          let seconds1 = new Date(initValue).getSeconds();
-          let seconds = new Date(initValue).setMinutes(seconds1 - value);
-          let result = new Date(seconds).getMilliseconds();
+          let seconds1 = new Date(value).getMilliseconds();
+          result = result - seconds1;
           return this;
 
         case "milliseconds":
           let milliseconds1 = new Date(initValue).getMilliseconds();
-          let milliseconds = new Date(initValue).setMilliseconds(
-            milliseconds1 - value
-          );
-          result = new Date(milliseconds).getMilliseconds();
+          result = result - milliseconds1;
           return this;
       }
     },
