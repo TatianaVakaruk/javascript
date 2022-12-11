@@ -65,7 +65,7 @@ const shmoment = (initValue) => {
 
         case "seconds":
           let seconds1 = value * 1000;
-          result = result + seconds1;
+          result = result - seconds1;
           return this;
 
         case "milliseconds":
