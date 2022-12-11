@@ -64,7 +64,7 @@ const shmoment = (initValue) => {
           return this;
 
         case "milliseconds":
-          let milliseconds1 = new Date(initValue).getMilliseconds();
+          let milliseconds1 = new Date(value).getMilliseconds();
           result = result - milliseconds1;
           return this;
       }
