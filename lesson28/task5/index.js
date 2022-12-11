@@ -4,7 +4,7 @@ const shmoment = (initValue) => {
     add(arg, value) {
       switch (arg) {
         case "years":
-          let value1 = new Date(value).getMilliseconds;
+          let value1 = new Date(value).getMilliseconds();
           result = result + value1;
           return this;
 
