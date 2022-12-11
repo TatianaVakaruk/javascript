@@ -1,5 +1,5 @@
 const shmoment = (initValue) => {
-  let result = new Date(initValue).getMilliseconds();
+  let result = Data.parse(initValue);
   const calc = {
     add(arg, value) {
       switch (arg) {
