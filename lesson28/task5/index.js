@@ -10,13 +10,14 @@ const shmoment = (initValue) => {
 
         case "months":
           let month1 = value * 1000 * 60 * 60 * 24 * 30;
-
           result = result + month1;
           return this;
+
         case "days":
           let day = value * 1000 * 60 * 60 * 24;
           result = result + day;
           return this;
+
         case "hours":
           let hour1 = value * 1000 * 60 * 60;
           result = result + hour1;
@@ -49,10 +50,12 @@ const shmoment = (initValue) => {
           let month1 = value * 1000 * 60 * 60 * 24 * 30;
           result = result - month1;
           return this;
+
         case "days":
           let day = value * 1000 * 60 * 60 * 24;
           result = result - day;
           return this;
+
         case "hours":
           let hour1 = value * 1000 * 60 * 60;
           result = result - hour1;
@@ -80,5 +83,6 @@ const shmoment = (initValue) => {
   };
   return calc;
 };
+
 const result1 = shmoment(new Date(2019, 3, 5)).add("years", 3).result();
 console.log(result1);
