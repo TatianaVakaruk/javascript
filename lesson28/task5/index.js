@@ -1,5 +1,5 @@
 const shmoment = (initValue) => {
-  let result = Data.parse(initValue);
+  let result = Date.parse(initValue);
   const calc = {
     add(arg, value) {
       switch (arg) {
