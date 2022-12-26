@@ -10,7 +10,7 @@ const fetchUserData = userName =>{
 }
 
 const renderUserData = userData=>{
-    console.log(userData);
+    //console.log(userData);
    const {avatar_url, name, location} = userData;
     userAvatarElem.scr = avatar_url;
     userNameElem.textContent = name;
