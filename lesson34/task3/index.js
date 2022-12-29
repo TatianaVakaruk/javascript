@@ -14,13 +14,9 @@ formElem.addEventListener("input", validate);
 
  
   const newData = data=>{
-   data=JSON.stringify(Object.fromEntries(new FormData(formElem)));
-return fetch(`${baseUrl}/${data}`).then(response=>{response.json()});
+ return  data=JSON.stringify(Object.fromEntries(new FormData(formElem)));
+
 }
-
-buttonElem.addEventListener('click', newData);
-
-
 
 const putData = data=>{
   formElem.reset();
@@ -30,5 +26,11 @@ const putData = data=>{
         'Content-Type': 'application/json;charset=utf-8',
     },
     body: JSON.stringify(data),
-}).then(data=>alert(data));
+});
+}
+
+buttonElem.addEventListener('click', putData);
+
+const reseivedData = () =>{
+  return fetch(baseUrl).then(response=>{response.json()}).then(data=>alert(data));
 }
