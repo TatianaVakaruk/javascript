@@ -14,15 +14,13 @@ formElem.addEventListener("input", validate);
 
  
   const newData = data=>{
-  return  data=JSON.stringify(Object.fromEntries(new FormData(formElem)));
-  //return fetch(`${baseUrl}/${data}`).then(response=>{response.json()});
+   data=JSON.stringify(Object.fromEntries(new FormData(formElem)));
+return fetch(`${baseUrl}/${data}`).then(response=>{response.json()});
 }
 
 buttonElem.addEventListener('click', newData);
 
-const saveData = data=>{
-  return fetch(`${baseUrl}/${data}`).then(response=>{response.json()});
-}
+
 
 const putData = data=>{
   formElem.reset();
