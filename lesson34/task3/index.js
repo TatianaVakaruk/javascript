@@ -13,12 +13,16 @@ const validate = () => {
 formElem.addEventListener("input", validate);
 
  
-  const saveData = data=>{
-    data=JSON.stringify(Object.fromEntries(new FormData(formElem)));
-  return fetch(`${baseUrl}/${data}`).then(response=>{response.json()});
+  const newData = data=>{
+  return  data=JSON.stringify(Object.fromEntries(new FormData(formElem)));
+  //return fetch(`${baseUrl}/${data}`).then(response=>{response.json()});
 }
 
-buttonElem.addEventListener('click', saveData);
+buttonElem.addEventListener('click', newData);
+
+const saveData = data=>{
+  return fetch(`${baseUrl}/${data}`).then(response=>{response.json()});
+}
 
 const putData = data=>{
   formElem.reset();
