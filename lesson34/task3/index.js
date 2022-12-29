@@ -23,12 +23,12 @@ const putData = data=>{
 });
 }
 
-//buttonElem.addEventListener('click', putData);
+buttonElem.addEventListener('click', putData);
 
 
 const reseivedData = () =>{
   return fetch(baseUrl).then(response => response.json()).then(data => alert(data));
 }
+reseivedData();
 
-buttonElem.addEventListener('click', putData, reseivedData);
 formElem.reset();
