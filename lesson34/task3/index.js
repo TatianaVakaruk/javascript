@@ -18,6 +18,8 @@ formElem.addEventListener("input", validate);
 
 }
 
+buttonElem.addEventListener('click', newData);
+
 const putData = data=>{
   formElem.reset();
   return fetch(baseUrl, {
@@ -28,8 +30,6 @@ const putData = data=>{
     body: JSON.stringify(data),
 });
 }
-
-buttonElem.addEventListener('click', putData);
 
 const reseivedData = () =>{
   return fetch(baseUrl).then(response=>{response.json()}).then(data=>alert(data));
