@@ -13,15 +13,15 @@ const validate = () => {
 formElem.addEventListener("input", validate);
 
  
-  const newData = data=>{
+  /*const newData = data=>{
  return  data=JSON.stringify(Object.fromEntries(new FormData(formElem)));
 
-}
+}*/
 
-buttonElem.addEventListener('click', newData);
+//buttonElem.addEventListener('click', newData);
 
 const putData = data=>{
-  formElem.reset();
+  data=Object.fromEntries(new FormData(formElem));
   return fetch(baseUrl, {
     method: 'POST',
     headers: {
@@ -30,7 +30,7 @@ const putData = data=>{
     body: JSON.stringify(data),
 });
 }
-
+buttonElem.addEventListener('click', putData);
 const reseivedData = () =>{
   return fetch(baseUrl).then(response=>{response.json()}).then(data=>alert(data));
 }
