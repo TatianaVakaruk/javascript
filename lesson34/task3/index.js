@@ -12,10 +12,13 @@ const validate = () => {
 
 formElem.addEventListener("input", validate);
 
- const data = JSON.stringify(Object.fromEntries(new FormData(formElem)));
+ 
   const saveData = data=>{
+    data=JSON.stringify(Object.fromEntries(new FormData(formElem)));
   return fetch(`${baseUrl}/${data}`).then(response=>{response.json()});
 }
+
+buttonElem.addEventListener('click', saveData);
 
 const putData = data=>{
   formElem.reset();
@@ -27,5 +30,3 @@ const putData = data=>{
     body: JSON.stringify(data),
 }).then(data=>alert(data));
 }
-
-buttonElem.addEventListener('click', saveData, putData);
