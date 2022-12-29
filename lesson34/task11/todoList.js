@@ -8,3 +8,4 @@ export const initTodoListHandlers = () => {
   const todoListElem = document.querySelector(".list");
   todoListElem.addEventListener("click", onToggleTask);
 };
+//
