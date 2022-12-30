@@ -1,6 +1,6 @@
 const formElem = document.querySelector(".login-form");
 const buttonElem = document.querySelector('.submit-button');
-const baseUrl = 'https://63ad3e19da81ba97619671ad.mockapi.io/users';
+const baseUrl = 'https://63ad3e19da81ba97619671ad.mockapi.io/myUsers';
 
 const validate = () => {
   if (formElem.reportValidity()) {
@@ -26,9 +26,7 @@ const putData = data=>{
 buttonElem.addEventListener('click', putData);
 
 const reseivedData = () =>{
-  data =Object.fromEntries(new FormData(formElem));
-  return fetch(baseUrl).then(response => response.json()).then(data=> alert(data));
+   return fetch(baseUrl).then(response => response.json()).then(data=> alert(data));
 }
-
 
 formElem.reset();
