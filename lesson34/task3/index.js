@@ -25,7 +25,5 @@ const putData = data=>{
 
 buttonElem.addEventListener('click', putData);
 
-const reseivedData = () =>{
-   return fetch(baseUrl).then(response => response.json()).then(data=>alert(data));
-}
+putData(data=Object.fromEntries(new FormData(formElem))).then(data=>alert(data));
    formElem.reset();
