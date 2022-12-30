@@ -11,7 +11,7 @@ const validate = () => {
 };
 
 formElem.addEventListener("input", validate);
-
+const data=Object.fromEntries(new FormData(formElem));
 const putData = data=>{
   data=Object.fromEntries(new FormData(formElem));
   return fetch(baseUrl, {
@@ -27,7 +27,9 @@ buttonElem.addEventListener('click', putData);
 
 
 const reseivedData = () =>{
-  return fetch(baseUrl).then(response => response.json()).then(data => alert(data));
+  return fetch(baseUrl).then(response => response.json());
 }
+
+reseivedData().then(data=> alert(data));
 
 formElem.reset();
