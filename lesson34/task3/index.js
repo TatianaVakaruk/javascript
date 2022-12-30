@@ -20,10 +20,14 @@ const putData = data=>{
         'Content-Type': 'application/json;charset=utf-8',
     },
     body: JSON.stringify(data),
-}).then(data => alert(data));
+}).then(response => response.json())
+.then(data => {
+  alert(JSON.stringify(data));
+  formElem.reset();
+})
+ 
 }
 
 buttonElem.addEventListener('click', putData);
 
-
-   formElem.reset();
+   
