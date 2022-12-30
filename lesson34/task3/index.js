@@ -25,9 +25,11 @@ const putData = data=>{
 
 buttonElem.addEventListener('click', putData);
 
+const mapData = (({_id, ...rest})=>data.map(rest => ({...rest, id:_id})));
 
 const reseivedData = () =>{
-  return fetch(baseUrl).then(response => response.json()).then(data=> alert(data));
+  return fetch(baseUrl).then(response => response.json()).then(data=data.map(data => mapData(data))).then(data=> console.log(data));
 }
 
+reseivedData();
 formElem.reset();
