@@ -29,6 +29,6 @@ const reseivedData = () =>{
   data =Object.fromEntries(new FormData(formElem));
   return fetch(baseUrl).then(response => response.json()).then(data=> console.log(data));
 }
-reseivedData();
+
 
 formElem.reset();
