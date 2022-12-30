@@ -20,10 +20,10 @@ const putData = data=>{
         'Content-Type': 'application/json;charset=utf-8',
     },
     body: JSON.stringify(data),
-});
+}).then(data => alert(data));
 }
 
 buttonElem.addEventListener('click', putData);
 
-putData(data=Object.fromEntries(new FormData(formElem))).then(data=>alert(data));
+
    formElem.reset();
