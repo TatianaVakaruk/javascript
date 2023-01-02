@@ -14,5 +14,5 @@ export const renderRepos = reposList=>{
 
     })
    cleanReposList();
-    listElem.append(...reposListElems)
+    listElem.append(...reposListElems);
 }
