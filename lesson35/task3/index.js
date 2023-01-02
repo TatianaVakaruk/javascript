@@ -17,7 +17,7 @@ const listElem = document.querySelector('.repo-list');
 
 const onSearchUser = () =>{
     showSpinner();
-    cleanReposList();
+   cleanReposList();
     const userName = userNameInputElem.value;
     fetchUserData(userName).then(userData=>
         {
@@ -29,7 +29,7 @@ const onSearchUser = () =>{
         
               alert(err.message);
             }).finally(()=>{
-                hideSpinner();
+               hideSpinner();
             })
 }
 showUserBtnElem.addEventListener('click', onSearchUser);
