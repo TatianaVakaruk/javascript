@@ -3,7 +3,7 @@ export const fetchUserData = async userName =>{
     if (response.ok){
         return await response.json()
     }
-    throw new Error('Faild to load data');
+    throw new Error('Failed to load data');
 
 };
   export const fetchRepositories= async url =>{
@@ -12,6 +12,6 @@ export const fetchUserData = async userName =>{
     if (response.ok){
         return await response.json();
     }
-    throw new Error('Faild to load data');
+    throw new Error('Failed to load data');
 
 };
